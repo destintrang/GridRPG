@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
+  m_Name: GrassBrush
+  m_EditorClassIdentifier: 
+  m_Prefabs:
+  - {fileID: 1536092483207160, guid: 6add1a78459eec6439403b99975a400e, type: 2}
+  - {fileID: 1256372151274128, guid: 911ae4eadd55b474ea91651e8f4e5462, type: 2}
+  - {fileID: 1851040930537084, guid: 20535ddbd121b6042a8aec2593ebe6a8, type: 2}
+  m_PerlinScale: 0.5
+  m_Z: 0

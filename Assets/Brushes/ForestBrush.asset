@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
+  m_Name: ForestBrush
+  m_EditorClassIdentifier: 
+  m_Prefabs:
+  - {fileID: 1057123160848386, guid: d9888f83048b2cd4c8f696cf8d7be406, type: 2}
+  - {fileID: 1664786406944630, guid: 68398e215590651408f95fd4d6825559, type: 2}
+  - {fileID: 1615677913258460, guid: 250a826bac440984f88cfdcbb55dcb6f, type: 2}
+  m_PerlinScale: 0.5
+  m_Z: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6e220d64ee67145b86efa340695acc, type: 3}
+  m_Name: Mace
+  m_EditorClassIdentifier: 
+  name: Mace
+  weaponClass: 3
+  damageType: 2
+  might: 5
+  magicBonus: 0
+  healBonus: 0
+  weight: 3
+  accuracy: 80
+  crit: 0
+  ranges: 01000000
+  armorSlayerDamageBonus: 5
+  effective: 1
