@@ -41,11 +41,16 @@ public class InventorySlot : MonoBehaviour {
 
     public void ButtonPress ()
     {
-        itemActions.GetComponent<ItemActions>().item = i;
-        itemActions.GetComponent<ItemActions>().itemIndex = index;
-        itemActions.GetComponent<ItemActions>().isEquipped = equipmentSlot;
-        itemActions.SetActive(true);
-        itemActions.transform.position = Input.mousePosition;
+        ItemActions.instance.ActivateButtons(i);
+
+        //Now we're looking at a specific item
+        MouseControl.instance.currentState = MouseControl.MouseState.ITEMSELECTED;
+
+        //itemActions.GetComponent<ItemActions>().item = i;
+        //itemActions.GetComponent<ItemActions>().itemIndex = index;
+        //itemActions.GetComponent<ItemActions>().isEquipped = equipmentSlot;
+        //itemActions.SetActive(true);
+        //itemActions.transform.position = Input.mousePosition;
         InventoryUI.instance.DisableInventoryButtons();
     }
 }

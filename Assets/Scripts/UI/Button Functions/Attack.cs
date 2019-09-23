@@ -15,6 +15,6 @@ public class Attack : MonoBehaviour {
     public void UnitAttack ()
     {
         MouseControl.instance.currentState = MouseControl.MouseState.ATTACKING;
-        ButtonManager.instance.ToggleActionMenu(false);
+        ButtonManager.instance.ToggleActionMenuOff();
     }
 }

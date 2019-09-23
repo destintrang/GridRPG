@@ -24,7 +24,7 @@ public class Wait : MonoBehaviour {
     {
         GameObject unit = MouseControl.instance.unitOfInterest;
         unit.GetComponent<UnitTracker>().MoveTo(myGrid.LocalToCell(unit.transform.position));
-        ButtonManager.instance.ToggleActionMenu(false);
+        ButtonManager.instance.ToggleActionMenuOff();
         MouseControl.instance.currentState = MouseControl.MouseState.FINISHED;
     }
 }

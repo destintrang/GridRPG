@@ -11,11 +11,15 @@ public class TileAttributes : MonoBehaviour {
 
     public bool walkable;
 
+    private Interactable interactable = null;
+    public void SetInteractable (Interactable i) { interactable = i; }
+    public Interactable GetInteractable () { return interactable; }
+
 
     // Use this for initialization
     void Start () {
-        Vector3Int coordinate = (GameObject.Find("Grid").GetComponent<GridLayout>().LocalToCell(transform.position));
-        GameObject.Find("Tile Manager").GetComponent<TileManager>().allTiles.Add(coordinate, this.gameObject);
+        //Vector3Int coordinate = (GameObject.Find("Grid").GetComponent<GridLayout>().LocalToCell(transform.position));
+        //GameObject.Find("Tile Manager").GetComponent<TileManager>().allTiles.Add(coordinate, this.gameObject);
     }
 	
 	// Update is called once per frame

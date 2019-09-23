@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,8 +13,6 @@ MonoBehaviour:
   m_Name: GrassBrush
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 1536092483207160, guid: 6add1a78459eec6439403b99975a400e, type: 2}
-  - {fileID: 1256372151274128, guid: 911ae4eadd55b474ea91651e8f4e5462, type: 2}
-  - {fileID: 1851040930537084, guid: 20535ddbd121b6042a8aec2593ebe6a8, type: 2}
+  - {fileID: 4310716689054150230, guid: d4ac3876425c0e74cb613d3a702c44bf, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0

@@ -17,7 +17,7 @@ public class Cancel : MonoBehaviour {
         GameObject unit = MouseControl.instance.unitOfInterest;
         unit.transform.position = unit.GetComponent<UnitTracker>().GetLocation() + new Vector3(0.5f, 0.5f, 0);
 
-        ButtonManager.instance.ToggleActionMenu(false);
+        ButtonManager.instance.ToggleActionMenuOff();
         ReturnToMoving();
     }
 

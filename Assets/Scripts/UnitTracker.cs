@@ -11,13 +11,19 @@ public class UnitTracker : MonoBehaviour {
     Vector3Int currentLocation;
 
 
+    //This is where we will keep track of whether or not a unit will be deployed in a battle
+    //By default, units will start off undeployed
+    private bool deployed = false;
+    public bool isDeployed () { return deployed; }
+    public void Deploy() { deployed = true; }
+    public void Undeploy() { deployed = false; }
+
+
     // Use this for initialization
     void Start ()
     {
-        myGrid = GameObject.Find("Grid").GetComponent<GridLayout>();
-        manager = GameObject.Find("Tile Manager").GetComponent<TileManager>();
 
-        Invoke("SnapToGrid", 0.0000000001f);  //lol
+        //Invoke("SnapToGrid", 0.0000000001f);  //lol
     }
 	
 	// Update is called once per frame
@@ -180,6 +186,9 @@ public class UnitTracker : MonoBehaviour {
 
     public void SnapToGrid ()
     {
+        myGrid = GameObject.Find("Grid").GetComponent<GridLayout>();
+        manager = GameObject.Find("Tile Manager").GetComponent<TileManager>();
+
         Vector3Int coord = myGrid.LocalToCell(transform.position);
         Vector3 targetLocation = coord;
         targetLocation.x += 0.5f;

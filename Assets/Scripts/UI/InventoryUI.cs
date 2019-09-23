@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour {
 
 
+    //The parent gameObject that holds the other buttons
+    public GameObject inventory;
+
     public GameObject weapon;
     public GameObject armor;
     public GameObject itemOne;
@@ -29,15 +32,31 @@ public class InventoryUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (active && Input.GetKeyDown(KeyCode.Escape))
-        {
-            ButtonManager.instance.ToggleActionMenu(true);
-            gameObject.SetActive(false);
-            MouseControl.instance.currentState = MouseControl.MouseState.SELECTACTION;
-        }
+		//if (active && Input.GetKeyDown(KeyCode.Escape))
+  //      {
+  //          ButtonManager.instance.ToggleActionMenu(true);
+  //          gameObject.SetActive(false);
+  //          MouseControl.instance.currentState = MouseControl.MouseState.SELECTACTION;
+  //      }
 	}
 
-    private void OnEnable()
+
+
+    public void EnableInventoryButtons()
+    {
+        active = true;
+        weapon.GetComponent<Button>().interactable = true;
+        armor.GetComponent<Button>().interactable = true;
+        itemOne.GetComponent<Button>().interactable = true;
+        itemTwo.GetComponent<Button>().interactable = true;
+        itemThree.GetComponent<Button>().interactable = true;
+
+        inventory.SetActive(true);
+
+        SetItemButtons();
+    }
+
+    private void SetItemButtons()
     {
         CharacterInventory i = MouseControl.instance.unitOfInterest.GetComponent<CharacterInventory>();
         active = true;
@@ -52,17 +71,6 @@ public class InventoryUI : MonoBehaviour {
         itemTwo.GetComponent<InventorySlot>().InitializeSlot(i.inventory[1], 4);
         itemThree.SetActive(true);
         itemThree.GetComponent<InventorySlot>().InitializeSlot(i.inventory[2], 5);
-    }
-
-
-    public void EnableInventoryButtons()
-    {
-        active = true;
-        weapon.GetComponent<Button>().interactable = true;
-        armor.GetComponent<Button>().interactable = true;
-        itemOne.GetComponent<Button>().interactable = true;
-        itemTwo.GetComponent<Button>().interactable = true;
-        itemThree.GetComponent<Button>().interactable = true;
     }
 
     public void DisableInventoryButtons ()

@@ -44,6 +44,9 @@ TagManager:
   - name: Tiles
     uniqueID: 346247543
     locked: 0
+  - name: Interactable
+    uniqueID: 1758190165
+    locked: 0
   - name: Tile Overlay
     uniqueID: 252187653
     locked: 0

@@ -21,7 +21,7 @@ public class Items : MonoBehaviour {
 
     public void ButtonPress ()
     {
-        ButtonManager.instance.ToggleActionMenu(false);
+        ButtonManager.instance.ToggleActionMenuOff();
         inventory.SetActive(true);
         InventoryUI.instance.EnableInventoryButtons();
         MouseControl.instance.currentState = MouseControl.MouseState.INVENTORY;

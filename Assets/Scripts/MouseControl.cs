@@ -7,11 +7,12 @@ using System.Linq;
 public class MouseControl : MonoBehaviour {
 
     public enum MouseState {
-        NORMAL,
-        MOVING,
-        ATTACKING,
+        NORMAL, //Default state
+        MOVING, //When the player is deciding where to move
+        ATTACKING, //After the player has chosen to attack
 		BATTLEFORECAST,
-        INVENTORY,
+        INVENTORY, //When the player is looking at their inventory
+        ITEMSELECTED, //When the player is looking at a specific item
         SELECTACTION,
         FINISHED,
         DISABLED
@@ -27,8 +28,9 @@ public class MouseControl : MonoBehaviour {
     Dictionary<Vector3Int, GameObject> units;
 
     public GameObject unitOfInterest;
-	Vector3Int originalLocation;
-	Vector3Int chosenAttack;
+    Vector3Int originalLocation;
+    Vector3Int newLocation;
+    Vector3Int chosenAttack;
 
     List<Vector3Int> possibleMoves;
     List<Vector3Int> possibleAttacks;
@@ -85,7 +87,7 @@ public class MouseControl : MonoBehaviour {
                 {
                     //The mouse's default state; the player can only press on ally units, enemy units, and empty spaces
                     case MouseState.NORMAL:
-                        if (units.ContainsKey(coord))
+                        if (IsPressableUnit(coord))
                         {
                             unitOfInterest = units[coord];
                             StartWalking();
@@ -105,15 +107,17 @@ public class MouseControl : MonoBehaviour {
                     case MouseState.MOVING:
                         if (unitOfInterest.tag == "Blue" && possibleMoves.Contains(coord) && (unitOfInterest.GetComponent<UnitTracker>().GetLocation() == coord || !units.ContainsKey(coord)))
                         {
+                            //Set the new location of the unit
+                            newLocation = coord;
+
                             //unitOfInterest.transform.position = coord + new Vector3(0.5f, 0.5f, 0);
                             possibleAttacksSmall = unitOfInterest.GetComponent<UnitTracker>().PossibleAttacksAtTile(coord);
-                            //ToggleBlueTiles(false);
 
                             //Turn on buttons for all available actions to the unit
                             //Check if there are attackable enemies; if so, then the attack option will be displayed
                             ToggleActionTiles(false);
                             ToggleRedTilesSmall(true);
-                            buttons.ToggleActionMenu(true);
+                            buttons.ToggleActionMenuOn(newLocation);
                             //Move the unit, but save its original location, in case the player cancels
                             originalLocation = unitOfInterest.GetComponent<UnitTracker>().GetLocation();
                             unitOfInterest.GetComponent<UnitTracker>().SetLocation(coord);
@@ -128,7 +132,7 @@ public class MouseControl : MonoBehaviour {
                     case MouseState.SELECTACTION:
                         if (possibleAttacksSmall.Contains(coord) && units.ContainsKey(coord) && units[coord].tag != tag)
                         {
-                            ButtonManager.instance.ToggleActionMenu(false);
+                            ButtonManager.instance.ToggleActionMenuOff();
 
                             bm.DisplayBattleForecast(unitOfInterest, units[coord], unitOfInterest.GetComponent<UnitTracker>().GetLocation(), coord);
                             chosenAttack = coord;
@@ -146,7 +150,7 @@ public class MouseControl : MonoBehaviour {
                         else if (!possibleAttacksSmall.Contains(coord))
                         {
                             //Go back to the select action state
-                            buttons.ToggleActionMenu(true);
+                            buttons.ToggleActionMenuOn(newLocation);
                             currentState = MouseState.SELECTACTION;
                         }
                         break;
@@ -171,13 +175,15 @@ public class MouseControl : MonoBehaviour {
 
             if (currentState == MouseState.FINISHED)
             {
-                TurnManager.instance.FinishUnit();
+                //TurnManager.instance.FinishUnit();
+                TurnManager.instance.FinishPlayerUnit(unitOfInterest);
                 Reset();
             }
         }
 	}
 
 
+    //How to handle the BACK button (escape button for now)
     void Escape ()
     {
         switch (currentState)
@@ -188,7 +194,7 @@ public class MouseControl : MonoBehaviour {
                 SmallReset();
                 break;
             case MouseState.SELECTACTION:
-                ButtonManager.instance.ToggleActionMenu(false);
+                ButtonManager.instance.ToggleActionMenuOff();
                 if (Movement.instance != null) { Movement.instance.moving = false; }
                 ResetUnit();
                 currentState = MouseControl.MouseState.MOVING;
@@ -197,13 +203,24 @@ public class MouseControl : MonoBehaviour {
                 break;
             case MouseState.ATTACKING:
                 //Go back to the select action state
-                buttons.ToggleActionMenu(true);
+                buttons.ToggleActionMenuOn(newLocation);
                 currentState = MouseState.SELECTACTION;
                 break;
             case MouseState.BATTLEFORECAST:
                 //Go back to the attacking state
                 bm.HideBattleForecast();
                 currentState = MouseState.ATTACKING;
+                break;
+            case MouseState.INVENTORY:
+                //Go back to the select action state
+                buttons.ToggleActionMenuOn(newLocation);
+                InventoryUI.instance.inventory.SetActive(false);
+                break;
+            case MouseState.ITEMSELECTED:
+                //Go back to the inventory state
+                InventoryUI.instance.EnableInventoryButtons();
+                ItemActions.instance.DeactivateButtons();
+                currentState = MouseState.INVENTORY;
                 break;
         }
     }
@@ -281,11 +298,12 @@ public class MouseControl : MonoBehaviour {
         {
             if (difference.Count > redPool.Count)
             {
-                for (int r = redPool.Count; r < possibleMoves.Count; r++)
+                for (int r = redPool.Count; r < difference.Count; r++)
                 {
                     redPool.Add(Instantiate(attackTile, this.transform));
                 }
             }
+
 
             for (int x = 0; x < difference.Count; x++)
             {
@@ -351,5 +369,22 @@ public class MouseControl : MonoBehaviour {
         unitOfInterest.GetComponent<Animator>().SetBool("Selected", false);
         unitOfInterest.GetComponent<Animator>().SetTrigger("Idle");
         unitOfInterest.GetComponent<Animator>().SetBool("Focus", false);
+
+        //If a character returns to idle, right now we'll just reset all idle animations
+        MasterAnimator.instance.ResetIdleAnimations();
     }
+
+
+    //Player should only be able to press on units that haven't moved yet
+    private bool IsPressableUnit (Vector3Int coord)
+    {
+        //Return false if there's no unit being pressed
+        if (!units.ContainsKey(coord)) { return false; }
+
+        //If the player unit has been moved, they shouldn't be able to press it
+        if (TurnManager.instance.GetMovedUnits().Contains( units[coord])) { return false; }
+
+        return true;
+    }
+
 }

@@ -19,6 +19,11 @@ public class TurnManager : MonoBehaviour {
     public GameObject topShade;
     public GameObject botShade;
 
+    private List<GameObject> playerUnits;
+    public void SetPlayerUnits (List<GameObject> units) { playerUnits = units; }
+    private List<GameObject> movedUnits = new List<GameObject>();
+    public List<GameObject> GetMovedUnits () { return movedUnits; }
+
     int finishedUnits;
     int totalBlueArmy;
     int totalRedArmy;
@@ -55,6 +60,16 @@ public class TurnManager : MonoBehaviour {
 		
 	}
 
+
+    public void FinishPlayerUnit (GameObject unit)
+    {
+        movedUnits.Add(unit);
+
+        if (movedUnits.Count == playerUnits.Count)
+        {
+            StartCoroutine(EndOfTurnSequence());
+        }
+    }
 
     public void FinishUnit ()
     {
@@ -94,13 +109,24 @@ public class TurnManager : MonoBehaviour {
                 if (totalRedArmy == 0) { StartCoroutine(EndOfTurnSequence()); }
                 break;
             case TurnState.RED:
-                totalRedArmy = GameObject.FindGameObjectsWithTag("Blue").Length;
-                currentState = TurnState.BLUE;
-                MouseControl.instance.currentState = MouseControl.MouseState.NORMAL;
+                StartPlayerTurn();
                 break;
         }
     }
 
+
+    private void StartPlayerTurn ()
+    {
+        //Resync animations, just in case
+        MasterAnimator.instance.ResetIdleAnimations();
+
+        //Make all units movable again
+        movedUnits.Clear();
+
+        totalRedArmy = GameObject.FindGameObjectsWithTag("Blue").Length;
+        currentState = TurnState.BLUE;
+        MouseControl.instance.currentState = MouseControl.MouseState.NORMAL;
+    }
 
     IEnumerator EndOfTurnSequence ()
     {

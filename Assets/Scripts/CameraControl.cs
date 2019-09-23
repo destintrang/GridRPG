@@ -17,10 +17,16 @@ public class CameraControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         UpdateCameraSize();
+        //SetBounds(TileManager.instance.GetLevelDimensions());
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update () {
         //The player can move the camera only on their turn
         if (MouseControl.instance.currentState != MouseControl.MouseState.DISABLED && TurnManager.instance.currentState == TurnManager.TurnState.BLUE)  
         {
