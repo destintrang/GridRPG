@@ -74,12 +74,13 @@ public class BattleManager : MonoBehaviour {
         attacking = true;
         int aDamage = battle.GetAttackerDamage();
         int aAccuracy = battle.GetAttackerAccuracy();
-        int aCrit = battle.GetAttackerCrit();
+        int aCritDamage = battle.GetAttackerCritDamage();
         int aAttacks = battle.GetAttackerAttacks();
         int dAttacks = battle.GetDefenderAttacks();
         int dDamage = battle.GetDefenderDamage();
         int dAccuracy = battle.GetDefenderAccuracy();
-        int dCrit = battle.GetDefenderCrit();
+        int dCritDamage = battle.GetDefenderCritDamage();
+
 
         while (attacking)
         {
@@ -90,24 +91,14 @@ public class BattleManager : MonoBehaviour {
                 attacker.GetComponent<AttackAnimations>().Strike(defender);
                 if (Random.Range(0, 100) < aAccuracy)
                 {
-                    if (Random.Range(0, 100) < aCrit)
-                    {
-                        //Critical hit!
-                        print("CRIT! " + attacker.name + " dealt " + (aDamage * 3) + " damage to " + defender.name + "!");
-                        DamageVFX(attacker, defender);
-                        SoundEffectsManager.instance.PlayStrike();
-                        defender.GetComponent<CharacterStats>().TakeDamage(aDamage * 3);
-                        dPanel.GetComponent<CombatPanel>().DeductHealth(aDamage * 3, defender.GetComponent<CharacterStats>().GetMaxHealth());
-                    }
-                    else
-                    {
-                        //Regular hit
-                        print("Hit! " + attacker.name + " dealt " + aDamage + " damage to " + defender.name + "!");
-                        DamageVFX(attacker, defender);
-                        SoundEffectsManager.instance.PlayStrike();
-                        defender.GetComponent<CharacterStats>().TakeDamage(aDamage);
-                        dPanel.GetComponent<CombatPanel>().DeductHealth(aDamage, defender.GetComponent<CharacterStats>().GetMaxHealth());
-                    }
+                    print(attacker.name + " will deal " + aDamage + " - " + (aDamage + aCritDamage) + " damage!");
+                    //Regular hit
+                    int damageDealt = CalculateDamage(aDamage, aCritDamage);
+                    print("Hit! " + attacker.name + " dealt " + damageDealt + " damage to " + defender.name + "!");
+                    DamageVFX(attacker, defender);
+                    SoundEffectsManager.instance.PlayStrike();
+                    defender.GetComponent<CharacterStats>().TakeDamage(damageDealt);
+                    dPanel.GetComponent<CombatPanel>().DeductHealth(damageDealt, defender.GetComponent<CharacterStats>().GetMaxHealth());
                 }
                 else
                 {
@@ -135,24 +126,14 @@ public class BattleManager : MonoBehaviour {
                 defender.GetComponent<AttackAnimations>().Strike(attacker);
                 if (Random.Range(0, 100) < dAccuracy)
                 {
-                    if (Random.Range(0, 100) < dCrit)
-                    {
-                        //Critical hit!
-                        print("CRIT! " + defender.name + " dealt " + (dDamage * 3) + " damage to " + attacker.name + "!");
-                        DamageVFX(defender, attacker);
-                        SoundEffectsManager.instance.PlayStrike();
-                        attacker.GetComponent<CharacterStats>().TakeDamage(dDamage * 3);
-                        aPanel.GetComponent<CombatPanel>().DeductHealth(dDamage * 3, defender.GetComponent<CharacterStats>().GetMaxHealth());
-                    }
-                    else
-                    {
-                        //Regular hit
-                        print("Hit! " + defender.name + " dealt " + dDamage + " damage to " + attacker.name + "!");
-                        DamageVFX(defender, attacker);
-                        SoundEffectsManager.instance.PlayStrike();
-                        attacker.GetComponent<CharacterStats>().TakeDamage(dDamage);
-                        aPanel.GetComponent<CombatPanel>().DeductHealth(dDamage, defender.GetComponent<CharacterStats>().GetMaxHealth());
-                    }
+                    print(attacker.name + " will deal " + dDamage + " - " + (dDamage + dCritDamage) + " damage!");
+                    //Regular hit
+                    int damageDealt = CalculateDamage(dDamage, dCritDamage);
+                    print("Hit! " + defender.name + " dealt " + dDamage + " damage to " + attacker.name + "!");
+                    DamageVFX(defender, attacker);
+                    SoundEffectsManager.instance.PlayStrike();
+                    attacker.GetComponent<CharacterStats>().TakeDamage(damageDealt);
+                    aPanel.GetComponent<CombatPanel>().DeductHealth(damageDealt, defender.GetComponent<CharacterStats>().GetMaxHealth());
                 }
                 else
                 {
@@ -196,18 +177,31 @@ public class BattleManager : MonoBehaviour {
         {
             PLAYERINFO.GetComponent<CombatPanel>().InitializeInfo(attacker.name, a.GetMaxHealth(), a.GetHealth(),
                                                                   a.GetWeapon(), a.GetArmor(), battle.GetAttackerDamage().ToString(),
-                                                                  battle.GetAttackerAccuracy().ToString(), battle.GetAttackerCrit().ToString(), battle.GetAttackerAttacks());
+                                                                  battle.GetAttackerAccuracy().ToString(), battle.GetAttackerCritDamage().ToString(), battle.GetAttackerAttacks());
             ENEMYINFO.GetComponent<CombatPanel>().InitializeInfo(defender.name, d.GetMaxHealth(), d.GetHealth(),
                                                                      d.GetWeapon(), d.GetArmor(), battle.GetDefenderDamage().ToString(),
-                                                                     battle.GetDefenderAccuracy().ToString(), battle.GetDefenderCrit().ToString(), battle.GetDefenderAttacks());
+                                                                     battle.GetDefenderAccuracy().ToString(), battle.GetDefenderCritDamage().ToString(), battle.GetDefenderAttacks());
         } else
         {
             ENEMYINFO.GetComponent<CombatPanel>().InitializeInfo(attacker.name, a.GetMaxHealth(), a.GetHealth(),
                                                                   a.GetWeapon(), a.GetArmor(), battle.GetAttackerDamage().ToString(),
-                                                                  battle.GetAttackerAccuracy().ToString(), battle.GetAttackerCrit().ToString(), battle.GetAttackerAttacks());
+                                                                  battle.GetAttackerAccuracy().ToString(), battle.GetAttackerCritDamage().ToString(), battle.GetAttackerAttacks());
             PLAYERINFO.GetComponent<CombatPanel>().InitializeInfo(defender.name, d.GetMaxHealth(), d.GetHealth(),
                                                                      d.GetWeapon(), d.GetArmor(), battle.GetDefenderDamage().ToString(),
-                                                                     battle.GetDefenderAccuracy().ToString(), battle.GetDefenderCrit().ToString(), battle.GetDefenderAttacks());
+                                                                     battle.GetDefenderAccuracy().ToString(), battle.GetDefenderCritDamage().ToString(), battle.GetDefenderAttacks());
+        }
+    }
+
+
+    private int CalculateDamage (int baseDamage, int critDamage)
+    {
+        if (baseDamage == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return baseDamage + Random.Range(0, critDamage + 1);
         }
     }
 

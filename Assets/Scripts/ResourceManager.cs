@@ -6,7 +6,7 @@ public class ResourceManager : MonoBehaviour
 {
 
 
-    private int gold;
+    private int gold = 100;
     public int GetGold() { return gold; }
 
 

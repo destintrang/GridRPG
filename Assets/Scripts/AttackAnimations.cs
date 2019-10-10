@@ -18,7 +18,9 @@ public class AttackAnimations : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float step = BattleManager.instance.speed * Time.deltaTime;
+        float step = 0.0f;
+        if (BattleManager.instance != null) { step = BattleManager.instance.speed * Time.deltaTime; }
+
 		if (Time.time < strikeTime)
         {
             transform.position = Vector3.MoveTowards(transform.position, enemyTile, step);

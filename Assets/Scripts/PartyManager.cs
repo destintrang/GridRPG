@@ -11,9 +11,9 @@ public class PartyManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        AddToParty(CharacterGenerator.instance.CreateCharacter());
-        AddToParty(CharacterGenerator.instance.CreateCharacter2());
-        AddToParty(CharacterGenerator.instance.CreateCharacter3());
+        //AddToParty(CharacterGenerator.instance.CreateCharacter(3));
+        //AddToParty(CharacterGenerator.instance.CreateCharacter2(3));
+        //AddToParty(CharacterGenerator.instance.CreateCharacter3(3));
     }
 
 

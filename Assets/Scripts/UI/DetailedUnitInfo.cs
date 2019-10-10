@@ -147,7 +147,7 @@ public class DetailedUnitInfo : MonoBehaviour {
         if (items.equippedWeapon != null) { damageType.text = items.equippedWeapon.damageType.ToString(); }
         else { damageType.text = "None"; }
         accuracy.text = stats.GetAccuracy().ToString();
-        critChance.text = stats.GetCritRate().ToString();
+        critChance.text = stats.GetCritDamage().ToString();
         combatSpeed.text = stats.GetCombatSpeed().ToString();
         if (items.equippedArmor != null)
         {
@@ -160,7 +160,7 @@ public class DetailedUnitInfo : MonoBehaviour {
             stabResist.text = stats.GetCombatDefense().ToString();
             bashResist.text = stats.GetCombatDefense().ToString();
         }
-        critEvade.text = stats.GetCritEvade().ToString();
+        critEvade.text = stats.GetCritDefense().ToString();
         evasion.text = stats.GetCombatEvasion().ToString();
     }
 

@@ -1,0 +1,33 @@
+======================
+BASIC MULTI-LEVEL DEMO
+======================
+
+x Design different levels
+x Level randomizer
+x Level rewards (gold based on performance)
+
+x Enemy stat randomizer
+x (Stretch) Enemy type randomizer
+x (Stretch) Extra enemy randomizer
+
+v? Fix slash/stab/smash damage
+v Fix crit damage
+x (Stretch) Implement magic damage
+
+x Fruit trees/Crates
+v Item randomizer
+v Shop
+x Selling items
+
+x Travellers (Unit shop)
+
+v UI: Level objective
+v UI: Fix unit info panel
+v UI: Fix detailed info panel
+x UI: Add unit details prefab to battle
+x UI: Fix battle details
+x UI: Event text box
+v UI: Item details object prefab
+v UI: Add item details prefab to convoy
+x UI: Add item details prefab to battle canvas
+x UI: Add item details prefab to overload canvas

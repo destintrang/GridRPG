@@ -54,7 +54,6 @@ public class ItemOverloadManager : MonoBehaviour
 
         LoadNext();
     }
-
     void LoadNext ()
     {
         LoadUI(toGive[0]);

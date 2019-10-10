@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{267DDD27-3B99-1F0D-010E-0F97A6C81877}</ProjectGuid>
+    <ProjectGuid>{68017959-272A-CA21-A4EC-72E50B47F73A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Base Stuff\BaseItemsManager.cs" />
     <Compile Include="Assets\Scripts\Base Stuff\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Base Stuff\BaseMenu.cs" />
+    <Compile Include="Assets\Scripts\Base Stuff\BaseMerchantManager.cs" />
     <Compile Include="Assets\Scripts\Base Stuff\BaseRepositionManager.cs" />
     <Compile Include="Assets\Scripts\Base Stuff\BaseUnitManager.cs" />
     <Compile Include="Assets\Scripts\Base Stuff\StartTile.cs" />
@@ -90,10 +91,12 @@
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\ConvoyManager.cs" />
     <Compile Include="Assets\Scripts\DisableOnStart.cs" />
+    <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\BattleSimulation.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\EnemyDecision.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\EventTextManager.cs" />
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interactables\Treasure.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\Accessory.cs" />
@@ -107,8 +110,10 @@
     <Compile Include="Assets\Scripts\Item Scripts\Weapon Skills\Swiftness.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\Weapon Skills\WeaponAdvantage.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\ItemManager.cs" />
     <Compile Include="Assets\Scripts\ItemOverloadManager.cs" />
     <Compile Include="Assets\Scripts\LayerUpdater.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MasterAnimator.cs" />
     <Compile Include="Assets\Scripts\MouseControl.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
@@ -116,6 +121,7 @@
     <Compile Include="Assets\Scripts\RandomNameGenerator.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\ShortestPath.cs" />
+    <Compile Include="Assets\Scripts\StartManager.cs" />
     <Compile Include="Assets\Scripts\TileAttributes.cs" />
     <Compile Include="Assets\Scripts\TileInfo.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
@@ -133,66 +139,71 @@
     <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\UI\ItemActions.cs" />
+    <Compile Include="Assets\Scripts\UI\ItemInfoDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\UnitInfoDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\UnitInfoPanel.cs" />
     <Compile Include="Assets\Scripts\UnitTracker.cs" />
+    <Compile Include="Assets\Scripts\Win Conditions\DefeatBoss.cs" />
+    <Compile Include="Assets\Scripts\Win Conditions\WinCondition.cs" />
     <None Include="Assets\2d-extras-master\Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <None Include="Assets\Art\OFL.txt" />
+    <None Include="Assets\ToDo.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -372,13 +383,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Destin/Documents/GridSystem/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Destin/Documents/GitHub/GridRPG/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

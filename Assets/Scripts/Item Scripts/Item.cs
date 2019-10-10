@@ -5,7 +5,14 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
+
     new public string name = "New Item";
+
+    public enum ItemRank { E, D, C, B, A };
+    public ItemRank rank;
+
+    public int goldCost;
+
     public bool usable;
     public string description;
 

@@ -14,12 +14,12 @@ public class BattleSimulation {
 
     public int aDamage;
     public int aAccuracy;
-    public int aCrit;
+    public int aCritDamage;
     public int aAttacks;
 
     public int dDamage;
     public int dAccuracy;
-    public int dCrit;
+    public int dCritDamage;
     public int dAttacks;
 
 
@@ -33,7 +33,7 @@ public class BattleSimulation {
 
         aDamage = CalculateDamage(_attacker, _defender, attackerPos, defenderPos);
         aAccuracy = CalculateHitChance(_attacker, _defender, attackerPos, defenderPos);
-        aCrit = CaluclateCritChance(_attacker, _defender);
+        aCritDamage = CalculateCritDamage(_attacker, _defender);
         aAttacks = 1 + _attacker.GetComponent<CharacterStats>().GetWeapon().GetBonusAttacks(conditions, _attacker);
         if (CalculateDoubleAttack(_attacker, _defender)) { aAttacks++; }
 
@@ -47,13 +47,13 @@ public class BattleSimulation {
             if (CalculateDoubleAttack(_defender, _attacker)) { dAttacks++; }
             dDamage = CalculateDamage(_defender, _attacker, defenderPos, attackerPos);
             dAccuracy = CalculateHitChance(_defender, _attacker, defenderPos, attackerPos);
-            dCrit = CaluclateCritChance(_defender, _attacker);
+            dCritDamage = CalculateCritDamage(_defender, _attacker);
         }
         else
         {
             dDamage = 0;
             dAccuracy = 0;
-            dCrit = 0;
+            dCritDamage = 0;
         }
     }
 
@@ -131,11 +131,12 @@ public class BattleSimulation {
         return (chance);
     }
 
-    int CaluclateCritChance (GameObject attacker, GameObject defender)
+    int CalculateCritDamage (GameObject attacker, GameObject defender)
     {
-        int chance = attacker.GetComponent<CharacterStats>().GetCritRate() - defender.GetComponent<CharacterStats>().GetCritEvade();
+        int chance = attacker.GetComponent<CharacterStats>().GetCritDamage() - defender.GetComponent<CharacterStats>().GetCritDefense();
+
         if (chance < 0) { chance = 0; }
-        else if (chance > 100) { chance = 100; }
+
         return (chance);
     }
     bool CalculateDoubleAttack (GameObject attacker, GameObject defender)
@@ -166,9 +167,9 @@ public class BattleSimulation {
     {
         return aAccuracy;
     }
-    public int GetAttackerCrit()
+    public int GetAttackerCritDamage()
     {
-        return aCrit;
+        return aCritDamage;
     }
     public int GetAttackerAttacks()
     {
@@ -182,9 +183,9 @@ public class BattleSimulation {
     {
         return dAccuracy;
     }
-    public int GetDefenderCrit()
+    public int GetDefenderCritDamage()
     {
-        return dCrit;
+        return dCritDamage;
     }
     public int GetDefenderAttacks()
     {

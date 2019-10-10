@@ -12,6 +12,7 @@ public class CharacterStats : MonoBehaviour {
     public void SetName (string n) { name = n; }
 
     [SerializeField] int rank = 1;
+    public int GetRank() { return rank; }
 
     [SerializeField] int maxHealth;
     [SerializeField] int health;
@@ -33,6 +34,7 @@ public class CharacterStats : MonoBehaviour {
     [SerializeField] float defenseGrowth;
     [SerializeField] float faithGrowth;
     [SerializeField] float luckGrowth;
+    [SerializeField] float buildGrowth;
 
     CharacterInventory equipment;
 
@@ -110,7 +112,7 @@ public class CharacterStats : MonoBehaviour {
     }
 
 
-    public void TakeDamage (int damage)
+    public void TakeDamage (int damage, int critDamage = 0)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
@@ -149,6 +151,30 @@ public class CharacterStats : MonoBehaviour {
         if (equipment.equippedArmor != null) { returnedInt += equipment.equippedArmor.defense; }
         return (returnedInt);
     }
+    public int GetCombatSlashDefense()
+    {
+        int returnedInt;
+        returnedInt = GetCombatDefense();
+        if (equipment.equippedArmor != null) { returnedInt += equipment.equippedArmor.cutBonus; }
+
+        return returnedInt;
+    }
+    public int GetCombatStabDefense()
+    {
+        int returnedInt;
+        returnedInt = GetCombatDefense();
+        if (equipment.equippedArmor != null) { returnedInt += equipment.equippedArmor.stabBonus; }
+
+        return returnedInt;
+    }
+    public int GetCombatSmashDefense()
+    {
+        int returnedInt;
+        returnedInt = GetCombatDefense();
+        if (equipment.equippedArmor != null) { returnedInt += equipment.equippedArmor.bashBonus; }
+
+        return returnedInt;
+    }
     public int GetCombatSpeed ()
     {
         int weight = 0;
@@ -174,16 +200,16 @@ public class CharacterStats : MonoBehaviour {
     {
         return (GetCombatSpeed() * 2 + GetFaith()) ;
     }
-    public int GetCritRate ()
+    public int GetCritDamage ()
     {
         if (equipment.equippedWeapon == null) { return 0; }
         int returnedInt = 0;
         if (equipment.equippedWeapon != null) { returnedInt += equipment.equippedWeapon.crit; }
-        return (returnedInt + (GetDexterity() / 2));
+        return (returnedInt + ((GetDexterity() + GetLuck()) / 2));
     }
-    public int GetCritEvade ()
+    public int GetCritDefense ()
     {
-        return (GetFaith() + (GetDexterity() / 2));
+        return ((GetLuck() + GetFaith()) / 2);
     }
 
 

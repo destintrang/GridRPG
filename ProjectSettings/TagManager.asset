@@ -50,6 +50,9 @@ TagManager:
   - name: Tile Overlay
     uniqueID: 252187653
     locked: 0
+  - name: Shade
+    uniqueID: 888121229
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

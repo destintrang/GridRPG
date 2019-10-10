@@ -106,8 +106,8 @@ public class UnitInfoPanel : MonoBehaviour {
         defense.text = unit.GetCombatDefense().ToString();
         evasion.text = unit.GetCombatEvasion().ToString();
         accuracy.text = unit.GetAccuracy().ToString();
-        critChance.text = unit.GetCritRate().ToString();
-        critEvade.text = unit.GetCritEvade().ToString();
+        critChance.text = unit.GetCritDamage().ToString();
+        critEvade.text = unit.GetCritDefense().ToString();
         speed.text = unit.GetCombatSpeed().ToString();
 }
 

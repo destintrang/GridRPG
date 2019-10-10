@@ -65,6 +65,8 @@ public class TurnManager : MonoBehaviour {
     {
         movedUnits.Add(unit);
 
+        WinCondition.instance.CheckVictory();
+
         if (movedUnits.Count == playerUnits.Count)
         {
             StartCoroutine(EndOfTurnSequence());
@@ -91,6 +93,8 @@ public class TurnManager : MonoBehaviour {
                     }
                     break;
             }
+
+            WinCondition.instance.CheckVictory();
         }
     }
 

@@ -7,6 +7,7 @@ public class BaseManager : BaseMenu
 
     //Turn this ON when the battle starts
     public MouseControl mc;
+    public Canvas battleCanvas;
     
     //Turn this OFF when the battle starts
     public GameObject startingTiles;
@@ -15,7 +16,6 @@ public class BaseManager : BaseMenu
     public Camera baseCamera;
 
     public Canvas mainCanvas;
-    public Canvas unitsCanvas;
     public Canvas repositionCanvas;
     Canvas currentCanvas;
     Stack<BaseMenu> menuStack;
@@ -36,7 +36,7 @@ public class BaseManager : BaseMenu
     {
         menuStack = new Stack<BaseMenu>();
         currentBaseMenu = this;
-        currentCanvas = mainCanvas;
+        currentCanvas = currentBaseMenu.canvas;
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class BaseManager : BaseMenu
         BaseUnitManager.instance.LoadPartyUnits();
         menuStack.Push(currentBaseMenu);
         currentBaseMenu = BaseUnitManager.instance;
-        StartCoroutine(SwitchCanvas(unitsCanvas));
+        StartCoroutine(SwitchCanvas(currentBaseMenu.canvas));
     }
 
     public void MapButton ()
@@ -81,6 +81,14 @@ public class BaseManager : BaseMenu
         BaseConvoyManager.instance.LoadConvoyMenu(character);
         menuStack.Push(currentBaseMenu);
         currentBaseMenu = BaseConvoyManager.instance;
+        StartCoroutine(SwitchCanvas(currentBaseMenu.canvas));
+    }
+
+    public void MerchantButton ()
+    {
+        //BaseItemsManager.instance.LoadPartyUnits();
+        menuStack.Push(currentBaseMenu);
+        currentBaseMenu = BaseMerchantManager.instance;
         StartCoroutine(SwitchCanvas(currentBaseMenu.canvas));
     }
 
@@ -123,6 +131,7 @@ public class BaseManager : BaseMenu
     public void StartButton ()
     {
         mc.enabled = true;
+        battleCanvas.gameObject.SetActive(true);
 
         TurnOffBase();
 

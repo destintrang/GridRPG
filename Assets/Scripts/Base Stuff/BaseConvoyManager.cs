@@ -44,6 +44,10 @@ public class BaseConvoyManager : BaseMenu
     public Button equipConvoyButton;
 
 
+    //Canvas object that displays item info
+    public ItemInfoDisplay infoDisplay;
+
+
     //Singleton
     public static BaseConvoyManager instance;
     private void Awake()
@@ -202,6 +206,8 @@ public class BaseConvoyManager : BaseMenu
         }
     }
 
+
+    //These button functions are for when the player presses on the UNIT's items
     public void OnItemSlotButton(int i)
     {
         currentItem = currentUnit.GetComponent<CharacterInventory>().inventory[i];
@@ -209,6 +215,9 @@ public class BaseConvoyManager : BaseMenu
 
         //Reset the item options before turning them back on
         ResetItemOptions();
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
 
 
         if (currentItem is Weapon)
@@ -227,6 +236,27 @@ public class BaseConvoyManager : BaseMenu
         {
             DisplayAccessoryOptions();
         }
+    }
+
+    public void OnWeaponSlot()
+    {
+        currentItem = currentUnit.GetComponent<CharacterInventory>().equippedWeapon;
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
+
+        //Reset the item options before turning them back on
+        ResetItemOptions();
+    }
+    public void OnArmorSlot()
+    {
+        currentItem = currentUnit.GetComponent<CharacterInventory>().equippedArmor;
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
+
+        //Reset the item options before turning them back on
+        ResetItemOptions();
     }
 
 
@@ -268,6 +298,7 @@ public class BaseConvoyManager : BaseMenu
     }
 
 
+    //When the player presses on one of the CONVOY's items
     public void OnConvoySlotButton(int i)
     {
         currentItemIndex = i;
@@ -275,6 +306,9 @@ public class BaseConvoyManager : BaseMenu
 
         //Reset the item options before turning them back on
         ResetItemOptions();
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
 
 
         if (currentItem is Weapon)
@@ -481,6 +515,9 @@ public class BaseConvoyManager : BaseMenu
     {
         currentItem = null;
         currentItemIndex = -1;
+
+        //Turn off the item info
+        infoDisplay.Deactivate();
     }
 
 

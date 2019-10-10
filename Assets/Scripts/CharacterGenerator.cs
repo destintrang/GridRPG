@@ -31,6 +31,22 @@ public class CharacterGenerator : MonoBehaviour
     }
 
 
+    public GameObject CreateRandomUnit ()
+    {
+        //Get list of all possible units to randomly choose from
+        List<GameObject> allUnits = new List<GameObject> { wolf, rabbit, bear };
+
+        int rng = Random.Range(0, allUnits.Count);
+
+        GameObject character = Instantiate(allUnits[rng], new Vector3(-1, -1, 0), new Quaternion());
+        CharacterStats c = character.GetComponent<CharacterStats>();
+
+        c.SetName(RandomNameGenerator.GetRandomName());
+
+        return character;
+    }
+
+
     public GameObject CreateCharacter(int startingRank = 1)
     {
         GameObject character = Instantiate(wolf);

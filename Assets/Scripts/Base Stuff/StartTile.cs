@@ -58,6 +58,7 @@ public class StartTile : MonoBehaviour
 
     public void ClearUnit ()
     {
+        //unit.transform.position = new Vector3(-1, -1, 0);
         unit = null;
     }
 

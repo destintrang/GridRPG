@@ -32,6 +32,9 @@ public class BaseItemsManager : BaseMenu
 
     public List<Transform> optionButtonLocations;
 
+    //Canvas object that displays item info
+    public ItemInfoDisplay infoDisplay;
+
 
     //Singleton
     public static BaseItemsManager instance;
@@ -105,6 +108,7 @@ public class BaseItemsManager : BaseMenu
         currentUnit = party[i];
 
         //If the item options were on, turn them off here
+        ResetCurrentItem();
         ResetItemOptions();
 
         unitName.text = party[i].GetComponent<CharacterStats>().GetName();
@@ -159,8 +163,12 @@ public class BaseItemsManager : BaseMenu
         currentItem = currentUnit.GetComponent<CharacterInventory>().inventory[i];
         currentItemIndex = i;
 
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
+
         //Reset the item options before turning them back on
         ResetItemOptions();
+
 
         if (currentItem is Weapon)
         {
@@ -178,6 +186,27 @@ public class BaseItemsManager : BaseMenu
         {
             DisplayAccessoryOptions();
         }
+    }
+
+    public void OnWeaponSlot ()
+    {
+        currentItem = currentUnit.GetComponent<CharacterInventory>().equippedWeapon;
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
+
+        //Reset the item options before turning them back on
+        ResetItemOptions();
+    }
+    public void OnArmorSlot()
+    {
+        currentItem = currentUnit.GetComponent<CharacterInventory>().equippedArmor;
+
+        //Load the item info
+        infoDisplay.LoadItemInfo(currentItem);
+
+        //Reset the item options before turning them back on
+        ResetItemOptions();
     }
 
 
@@ -285,6 +314,9 @@ public class BaseItemsManager : BaseMenu
     {
         currentItem = null;
         currentItemIndex = -1;
+
+        //Turn off the item info
+        infoDisplay.Deactivate();
     }
 
     private void ResetItemMenu()

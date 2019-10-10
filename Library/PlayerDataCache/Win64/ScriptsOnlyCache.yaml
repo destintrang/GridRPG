@@ -1,0 +1,1456 @@
+ScriptsOnlyBuild:
+  usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - UnityEditor.CoordinateBrush
+    - UnityEditor.GameObjectBrush
+    - UnityEditor.LineBrush
+    - UnityEditor.TintBrush
+    - UnityEditor.TintBrushSmooth
+    Assembly-CSharp.dll:
+    - Accessory
+    - Armor
+    - Attack
+    - AttackAnimations
+    - BaseConvoyManager
+    - BaseItemsManager
+    - BaseManager
+    - BaseMerchantManager
+    - BaseRepositionManager
+    - BaseUnitManager
+    - BattleManager
+    - ButtonManager
+    - CameraControl
+    - Cancel
+    - CharacterGenerator
+    - CharacterInventory
+    - CharacterStats
+    - CombatPanel
+    - ConvoyManager
+    - Darkness
+    - DefeatBoss
+    - DetailedUnitInfo
+    - DisableOnStart
+    - DontDestroyOnLoad
+    - EnemyAI
+    - EnemyManager
+    - EventTextManager
+    - ExpandInformation
+    - ExpandItem
+    - HealingConsumable
+    - InventorySlot
+    - InventoryUI
+    - ItemActions
+    - ItemInfoDisplay
+    - ItemManager
+    - ItemOverloadManager
+    - Items
+    - LayerUpdater
+    - LevelManager
+    - MasterAnimator
+    - MouseControl
+    - Movement
+    - PartyManager
+    - ResourceManager
+    - ShortestPath
+    - SoundEffectsManager
+    - StartManager
+    - StartTile
+    - TileAttributes
+    - TileManager
+    - Treasure
+    - TurnManager
+    - UnitInfoDisplay
+    - UnitInfoPanel
+    - UnitTracker
+    - Wait
+    - Weapon
+    Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
+    - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
+    - UnityEditor.Tilemaps.SceneViewGridManager
+    - UnityEditor.Tilemaps.TileDragAndDropManager
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
+    - UnityEngine.Networking.NetworkIdentity
+  sceneClasses:
+    Assets/Scenes/Level1.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9684}
+    - Class: 114
+      Script: {instanceID: 9698}
+    - Class: 114
+      Script: {instanceID: 9722}
+    - Class: 114
+      Script: {instanceID: 9788}
+    - Class: 114
+      Script: {instanceID: 9892}
+    - Class: 114
+      Script: {instanceID: 9894}
+    - Class: 114
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 9944}
+    - Class: 114
+      Script: {instanceID: 9958}
+    - Class: 114
+      Script: {instanceID: 9994}
+    - Class: 114
+      Script: {instanceID: 10016}
+    - Class: 114
+      Script: {instanceID: 10028}
+    - Class: 114
+      Script: {instanceID: 10146}
+    - Class: 114
+      Script: {instanceID: 10168}
+    - Class: 114
+      Script: {instanceID: 10198}
+    - Class: 114
+      Script: {instanceID: 10282}
+    - Class: 114
+      Script: {instanceID: 10320}
+    - Class: 114
+      Script: {instanceID: 10344}
+    - Class: 114
+      Script: {instanceID: 10412}
+    - Class: 114
+      Script: {instanceID: 10422}
+    - Class: 114
+      Script: {instanceID: 10456}
+    - Class: 114
+      Script: {instanceID: 10478}
+    - Class: 114
+      Script: {instanceID: 10526}
+    - Class: 114
+      Script: {instanceID: 10630}
+    - Class: 114
+      Script: {instanceID: 10672}
+    - Class: 114
+      Script: {instanceID: 10682}
+    - Class: 114
+      Script: {instanceID: 10684}
+    - Class: 114
+      Script: {instanceID: 10730}
+    - Class: 114
+      Script: {instanceID: 10974}
+    - Class: 114
+      Script: {instanceID: 10996}
+    - Class: 114
+      Script: {instanceID: 11000}
+    - Class: 114
+      Script: {instanceID: 11006}
+    - Class: 114
+      Script: {instanceID: 11054}
+    - Class: 114
+      Script: {instanceID: 11104}
+    - Class: 114
+      Script: {instanceID: 11170}
+    - Class: 114
+      Script: {instanceID: 11208}
+    - Class: 114
+      Script: {instanceID: 11246}
+    - Class: 114
+      Script: {instanceID: 11270}
+    - Class: 114
+      Script: {instanceID: 11274}
+    - Class: 114
+      Script: {instanceID: 11386}
+    - Class: 114
+      Script: {instanceID: 11452}
+    - Class: 114
+      Script: {instanceID: 11498}
+    - Class: 114
+      Script: {instanceID: 11562}
+    - Class: 114
+      Script: {instanceID: 11574}
+    - Class: 114
+      Script: {instanceID: 11608}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11628}
+    - Class: 114
+      Script: {instanceID: 11630}
+    - Class: 114
+      Script: {instanceID: 11662}
+    - Class: 114
+      Script: {instanceID: 11720}
+    - Class: 114
+      Script: {instanceID: 11730}
+    - Class: 114
+      Script: {instanceID: 11750}
+    - Class: 114
+      Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 11958}
+    - Class: 114
+      Script: {instanceID: 12048}
+    - Class: 114
+      Script: {instanceID: 12068}
+    - Class: 114
+      Script: {instanceID: 12084}
+    - Class: 114
+      Script: {instanceID: 12098}
+    - Class: 114
+      Script: {instanceID: 12104}
+    - Class: 114
+      Script: {instanceID: 12114}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
+    Assets/Scenes/StartScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9684}
+    - Class: 114
+      Script: {instanceID: 9722}
+    - Class: 114
+      Script: {instanceID: 9730}
+    - Class: 114
+      Script: {instanceID: 9788}
+    - Class: 114
+      Script: {instanceID: 9828}
+    - Class: 114
+      Script: {instanceID: 9830}
+    - Class: 114
+      Script: {instanceID: 9880}
+    - Class: 114
+      Script: {instanceID: 9892}
+    - Class: 114
+      Script: {instanceID: 9898}
+    - Class: 114
+      Script: {instanceID: 9906}
+    - Class: 114
+      Script: {instanceID: 9934}
+    - Class: 114
+      Script: {instanceID: 9944}
+    - Class: 114
+      Script: {instanceID: 9958}
+    - Class: 114
+      Script: {instanceID: 9994}
+    - Class: 114
+      Script: {instanceID: 10016}
+    - Class: 114
+      Script: {instanceID: 10146}
+    - Class: 114
+      Script: {instanceID: 10174}
+    - Class: 114
+      Script: {instanceID: 10198}
+    - Class: 114
+      Script: {instanceID: 10208}
+    - Class: 114
+      Script: {instanceID: 10282}
+    - Class: 114
+      Script: {instanceID: 10344}
+    - Class: 114
+      Script: {instanceID: 10352}
+    - Class: 114
+      Script: {instanceID: 10412}
+    - Class: 114
+      Script: {instanceID: 10478}
+    - Class: 114
+      Script: {instanceID: 10630}
+    - Class: 114
+      Script: {instanceID: 10730}
+    - Class: 114
+      Script: {instanceID: 10792}
+    - Class: 114
+      Script: {instanceID: 10850}
+    - Class: 114
+      Script: {instanceID: 10906}
+    - Class: 114
+      Script: {instanceID: 10974}
+    - Class: 114
+      Script: {instanceID: 11000}
+    - Class: 114
+      Script: {instanceID: 11208}
+    - Class: 114
+      Script: {instanceID: 11274}
+    - Class: 114
+      Script: {instanceID: 11314}
+    - Class: 114
+      Script: {instanceID: 11326}
+    - Class: 114
+      Script: {instanceID: 11374}
+    - Class: 114
+      Script: {instanceID: 11498}
+    - Class: 114
+      Script: {instanceID: 11554}
+    - Class: 114
+      Script: {instanceID: 11562}
+    - Class: 114
+      Script: {instanceID: 11608}
+    - Class: 114
+      Script: {instanceID: 11750}
+    - Class: 114
+      Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 11958}
+    - Class: 114
+      Script: {instanceID: 12048}
+    - Class: 114
+      Script: {instanceID: 12068}
+    - Class: 114
+      Script: {instanceID: 12114}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+  scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 17a8f06c91379f6f39a2388a5106f8f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseConvoyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 984dcc0ba3707b7691fbdca8ff508d28
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: df8d806fa4f8057ea0e9b5ad17e29b8b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterStats
+  - hash:
+      serializedVersion: 2
+      Hash: 87ff43d2baf3385cba327d8f803a4ebb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: bf530eb47e6a86dcee1d42e40c3b7ac8
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: fc3cc368883a98c546b77a024f9f8e28
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Treasure
+  - hash:
+      serializedVersion: 2
+      Hash: 5bd9a19c7b5f76c563418e28f48a561b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: e7a73f5f78ba6445195ec23b74a1ce2d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a5781dc71a671b1ad2b38de19f24b71f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 08e9e94ea3d128946a49a8b0126d8edf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartManager
+  - hash:
+      serializedVersion: 2
+      Hash: fc108ce7d98c40ac0907e8ca7f500c76
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wait
+  - hash:
+      serializedVersion: 2
+      Hash: 06a330481ec400be50745bb7faf76bd0
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: eafb77726b67b7571818a7210a3ce11e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkIdentity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: abf1930d8126d0b2e00e9449129a0190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 89498a9a4a6296605faa18a2c5f758a4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: c5a3dd365990f7d46e90561a7ac0a679
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Darkness
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 9e70ecf91466f07d9bd649be625cae52
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: ad9173d3a69d99153f38ed4b62226129
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: f647df37e2fcb2949597576cc352ffee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Armor
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 92583f5c853ea78ec8d05eed0dcbb497
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: RandomTile
+  - hash:
+      serializedVersion: 2
+      Hash: 4ecd62120a8cef414b673376e6a743f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemOverloadManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 091075fdbc6ed244eebeca8ee035fd52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Consumable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitTracker
+  - hash:
+      serializedVersion: 2
+      Hash: c2d625924a74e50d011eab5e53b59ea5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character
+  - hash:
+      serializedVersion: 2
+      Hash: 75b328e907c21aa6e1f39cd016b14864
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine
+    className: RuleTile
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Cancel
+  - hash:
+      serializedVersion: 2
+      Hash: bd3cf68c8964d3c66d1c43f4f98508c9
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3f0b469d844365c00a63de0437c9b29e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkProximityChecker
+  - hash:
+      serializedVersion: 2
+      Hash: cf9f5cf2c3145a37ac07f00e50e460f9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 93be59dda6cc6a35a83e47bc9688e9ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExpandInformation
+  - hash:
+      serializedVersion: 2
+      Hash: 4bdbc2b6ca13a2d102e9d35aa5ddbbf6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealingConsumable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 00274a21279f5cb831ce20f895049e38
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: ac5a8478dcbc3283234dcd9693edb894
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e9539b36af987b1fc4d5169f5d2f3d29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 673a0bcd687c116098fec02a3ed80ca4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseRepositionManager
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemManager
+  - hash:
+      serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 38f8c9a196b67eda9e165a80ba0f9c80
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponAdvantage
+  - hash:
+      serializedVersion: 2
+      Hash: 97117f64f9646af72218d9617c5d1ec2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventorySlot
+  - hash:
+      serializedVersion: 2
+      Hash: c7752fc553ef2a542a5b65696ec62c2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitInfoPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 303ad70ce203ad874efe2965d0fbcff9
+    assemblyName: Unity.Analytics.Tracker.dll
+    namespaceName: UnityEngine.Analytics
+    className: AnalyticsEventTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 7fb9de8dcf73854b6b328eca1f7a6e6d
+    assemblyName: Unity.Analytics.Tracker.dll
+    namespaceName: UnityEngine.Analytics
+    className: AnalyticsTracker
+  - hash:
+      serializedVersion: 2
+      Hash: b4a841fa8af48df14580235f7c623f4b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseItemsManager
+  - hash:
+      serializedVersion: 2
+      Hash: cc4274b586df3c02688bac01b88bd16c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 0fb27be807aa299702f28ad0bcad1f46
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b8a5e8091ab0b8861d2add371082c5e0
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 113c7bd864d7c636cb05cf17f4eb4ba2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BattleManager
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: aef908e94a9c4eb953102e26170ff9c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: AnimatedTile
+  - hash:
+      serializedVersion: 2
+      Hash: cdf089f6cdbdaf804990606672273b73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: WeightedRandomTile
+  - hash:
+      serializedVersion: 2
+      Hash: 265cf27ba050d55ff33a8acab4ded6c0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5887ef1bc706b22b773d253fd443ceef
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisableOnStart
+  - hash:
+      serializedVersion: 2
+      Hash: e100fd826ee9b45dc82f97c142ac7f4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinCondition
+  - hash:
+      serializedVersion: 2
+      Hash: d7146e7a1c990b45434fff6d5d7af1bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TurnManager
+  - hash:
+      serializedVersion: 2
+      Hash: ce553e145f7e7e6a91062501aa859fff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundEffectsManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShortestPath
+  - hash:
+      serializedVersion: 2
+      Hash: b3ab2106268377ffe25dd18ac23dca28
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Asset
+  - hash:
+      serializedVersion: 2
+      Hash: 97ace6213ad0f149b0917a4c669c6ca3
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: e7998282e09c59c23b3065763efc81cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EventTextManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkCallbacks
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Analytics.Editor.dll
+    namespaceName: UnityEditor.Analytics
+    className: AnalyticsEventTrackerEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 21e871d89bbce53c038fc75ad1b7c7f3
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ResourceManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 7ba35897a6eb27627ed456c682c34253
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: PipelineTile
+  - hash:
+      serializedVersion: 2
+      Hash: 7fe713185aea183ae67d985f1bfddcef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine
+    className: RuleOverrideTile
+  - hash:
+      serializedVersion: 2
+      Hash: 4fd8bf02e3089425d3502e26c44ba31a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 516824a435828eadd660ef2f1658a48e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 92da9881aed190e8bb74661bcd74aa2c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: a1d15801797b5f6ade1ad871361428a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemActions
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Attack
+  - hash:
+      serializedVersion: 2
+      Hash: 5f16cf8ba26e6358e292bf106b18299a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Movement
+  - hash:
+      serializedVersion: 2
+      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 2a4c1bd90e818528e002039bbd2043d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryUI
+  - hash:
+      serializedVersion: 2
+      Hash: d2ada1a912ce842afd55ceed9979bf25
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseControl
+  - hash:
+      serializedVersion: 2
+      Hash: 12e64d607873da15ad3f833620350d51
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: a5747f2717bcc617367b1e51600403a6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Accessory
+  - hash:
+      serializedVersion: 2
+      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 6a72234ebbc1d06a78a1997174450a6f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Item
+  - hash:
+      serializedVersion: 2
+      Hash: 35a9693c388776aaf487636491a20f11
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartTile
+  - hash:
+      serializedVersion: 2
+      Hash: e1300922cc039f41ab46a47f4cb05898
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: d0f09db966d2b8db615f65ce9c3c835b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseManager
+  - hash:
+      serializedVersion: 2
+      Hash: 60feabd7fffe6dda9c96b8f55850013b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterInventory
+  - hash:
+      serializedVersion: 2
+      Hash: 318c6c13a19c9fac98135ae14889de1b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkMigrationManager
+  - hash:
+      serializedVersion: 2
+      Hash: cc3f104a85b32881037e7a11131934ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TileInfo
+  - hash:
+      serializedVersion: 2
+      Hash: a982cb926b37b141d7eec0d8524a28cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PartyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDestroyOnLoad
+  - hash:
+      serializedVersion: 2
+      Hash: c1933cc0a2f4ff6eb13333347497beb3
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a6cda81ffab69eb02c0db97479b17b29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CombatPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 077ce74d0644472013a7f62db50f7e6d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DetailedUnitInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 3b3bf14021899a113dbb5c9e4f0d86ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: GridInformation
+  - hash:
+      serializedVersion: 2
+      Hash: ee0cef6caaac8ae485bfa82f000f0f7b
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: f3f9ac28c0fcc84f3ff93103a5727c76
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelManager
+  - hash:
+      serializedVersion: 2
+      Hash: 516824a435828eadd660ef2f1658a48e
+    assemblyName: Unity.Analytics.DataPrivacy.dll
+    namespaceName: UnityEngine.Analytics
+    className: DataPrivacyButton
+  - hash:
+      serializedVersion: 2
+      Hash: f336e086360abe49a3323e5f1583c35a
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 31204801d547399fad7874e30de6e4d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConvoyManager
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MasterAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicManager
+  - hash:
+      serializedVersion: 2
+      Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: a08a437486b21d49c119afe97b7ab12b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemInfoDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 2eced6b0f9e1d9e20f59001ac2313023
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DefeatBoss
+  - hash:
+      serializedVersion: 2
+      Hash: f7bf6472cc10117790ac6730428804fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyManager
+  - hash:
+      serializedVersion: 2
+      Hash: d1d822d1291e2758b2af34ef931d0fc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Items
+  - hash:
+      serializedVersion: 2
+      Hash: 490a4632ae50fb0b65bba5aaaf7edebd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TintTextureGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 19bc6c06b8df5156f5a916ad2a6d1db8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonManager
+  - hash:
+      serializedVersion: 2
+      Hash: 7ba35897a6eb27627ed456c682c34253
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: TerrainTile
+  - hash:
+      serializedVersion: 2
+      Hash: c64c2ad848e4b99b1ef9da024bba5ee1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ArmorSlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 954e9fc1ac8142b82ac9d31ed520ae75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TileManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5c72e03ecb33c592ab16a715ee6805ef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseMerchantManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1dcb82730d983b77cec736c6ef19f814
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkDiscovery
+  - hash:
+      serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AttackAnimations
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d791aa6007fa3640be1164ea75bb087d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: d1914be0699b6f6254eda07df5ff1c84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAI
+  - hash:
+      serializedVersion: 2
+      Hash: e6ae40841db498b6e673877ac45ad208
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: d617250343246e4c00cc7bddc509ca75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RangeAdvantage
+  - hash:
+      serializedVersion: 2
+      Hash: 0d0279032df2eb1a5700b1e21125c8fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Initiator
+  - hash:
+      serializedVersion: 2
+      Hash: f7835fb1d48476346dba1b9f53d8b6c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TileAttributes
+  - hash:
+      serializedVersion: 2
+      Hash: 5372ed2ce39229b1ac910757999a8be2
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 3165968ba45c74472d279ba04455fccb
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RandomNameGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 17219e35235377c84b1eb011b192c173
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitInfoDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 5867f324d14f77b48ed97ee140807fba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Swiftness
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: e0ee4b3d4e27318934cc940a969d3d96
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
+      Hash: 3f52d34ea17dfc771004b80f5d492445
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 8649814970b42d345b89944b862453cc
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 7090bc1e5ccaec2a9d0d1335ed8cee99
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 0852116b29df10ce3f9156850d406521
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 3ab7272a8b7d3ea5a142e0c9b6aae63b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: d617250343246e4c00cc7bddc509ca75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Weapon
+  - hash:
+      serializedVersion: 2
+      Hash: 8220b46879dc5e37db1b940c938f5744
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 3e3d835ecb3b0494218304790a8f03f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExpandItem
+  - hash:
+      serializedVersion: 2
+      Hash: 85c97bcc5f84eeb0999d75902803b99d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 548f0904c5396f0ac1b783ede3a37ce1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraControl
+  - hash:
+      serializedVersion: 2
+      Hash: 378828912dfe594592e01fb58dfa8623
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseUnitManager
+  - hash:
+      serializedVersion: 2
+      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LayerUpdater
+  - hash:
+      serializedVersion: 2
+      Hash: 0d863adb0b285c93997bc338a7c975da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Interactable
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  platform: 19
+  scenePathNames:
+  - Assets/Scenes/StartScene.unity
+  - Assets/Scenes/Level1.unity
+  playerPath: C:/Users/Destin/Documents/GridSystem/Builds/GridSystem.exe

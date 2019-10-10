@@ -11,6 +11,15 @@ public class Darkness : MonoBehaviour {
     public bool fading;
 
 
+    //Darkness.instance.FadeIn();
+    //while (Darkness.instance.fading) { yield return null; }
+
+    //DO STUFF HERE
+
+    //Darkness.instance.FadeOut();
+    //while (Darkness.instance.fading) { yield return null; }
+
+
     //Singleton
     public static Darkness instance;
     private void Awake()
@@ -54,4 +63,11 @@ public class Darkness : MonoBehaviour {
 
         black.gameObject.SetActive(false);
     }    
+
+    public void SetToBlack ()
+    {
+        black.gameObject.SetActive(true);
+        black.color = new Color(black.color.r, black.color.g, black.color.b, 1);
+    }
+
 }
